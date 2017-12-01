@@ -111,3 +111,11 @@ text-overflow:ellipsis;
 ```js
 move(val) {this.distance(val)}
 ```
+
+### icon图标在安卓和ios上显示不一样
+```css
+.className{
+  display: flex;
+  align-items: center;
+}
+```
