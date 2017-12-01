@@ -61,7 +61,9 @@ this.$router.push({name: '/index', query: {
 ```
 
 ### dom操作
-> created要进行dom操作就要放到Vue.nextTick()函数中
+> created要进行dom操作就要放到this.$nextTick(() => {
+>   // function
+> })函数中
 
 ### 小型项目不用vuex，进行兄弟页面之间的传参，使用eventBus，实际使用中出现出发多次的bug
 1.在src目录下创建一个bus.js
@@ -135,6 +137,3 @@ declare module "*.vue" {
 ```
 
 ### 遇到横竖屏的情况，better-scroll无法准确计算content的高度，better-scroll的div高度不能用100%，用100vh
-
-### 下面试试在图片md中插入图片
-![测试图片](https://github.com/qiyaozu/qiyaozu.github.io/blob/master/aa.jpg)

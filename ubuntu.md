@@ -35,3 +35,6 @@ title: ubuntu系统学到的知识
 
 ### 创建一个文件的命令
   cd.>1.txt
+
+### 全局查找一个文件
+  find / -name fileName

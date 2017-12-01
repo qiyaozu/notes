@@ -1,5 +1,5 @@
 ---
-title: vscode遇到的一些坑
+title: vscode配置
 ---
 
 ### 让vs的emmet支持vue-html
