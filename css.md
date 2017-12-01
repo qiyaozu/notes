@@ -98,3 +98,16 @@ text-overflow:ellipsis;
     filter: gray;
 }
 ```
+
+### 安卓机上input获得焦点时，输入框会把整个页面往上挤
+1.页面外层元素不能有固定定位，据对定位是可以的
+2.input的高度不能用百分比，或者vh，用vw和px是可以的
+
+### input获得焦点时，让整个页面往上移动
+```html
+<input @focus="move('-20%')">
+```
+
+```js
+move(val) {this.distance(val)}
+```
