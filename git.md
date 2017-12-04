@@ -14,10 +14,15 @@ title: git学习
 * 接到任务后，先把本地的dev更新到最新（前提是本地的dev是主角儿）
 * 创建一个分支，分支的命名和任务要相关，方便以后好切换
 * 如果这个任务还没完   又接到了一个紧急的任务   就要先把没完成的任务先暂存起来
+
   git add -u          //把本地修改添加到缓存
+  git reset .         // 撤销add的提交
+
   git commit -m "#77 [ADD] ..."
-  git checkout dev
-  git checkout -b 新任务分支
+  git checkout .      // 撤销所有的commit
+  
+  git branch dev
+  git branch -b 新任务分支
 * 紧急任务处理完之后 切换到没有完成任务的分支上面    继续干活
 
 

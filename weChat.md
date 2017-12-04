@@ -36,3 +36,22 @@ showAnimate() {
   });
 },
 ```
+
+#### 页面之间传参
+  wx.navigateTo({url:'/pages/xiangqing/xiangqing?id=上一页的参数'})
+
+
+### 点击事件传参
+```html
+<view class='block' bindtap='fun' data-type='{{item}}'></view>
+```
+
+
+```js
+fun(e) {
+  let type = e.currentTarget.dataset.type;
+}
+```
+
+
+

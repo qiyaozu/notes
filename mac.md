@@ -27,3 +27,14 @@ export JAVA_HOME
 export CLASSPATH
 
 export PATH
+
+### Mac 升级node到最新稳定版
+> 在全局安装node的版本管理工具  ： n
+  npm install -g n
+
+> sudo 是必须的，latest是最新版，stable是最新稳定版
+
+  n latest
+
+  n stable
+  
