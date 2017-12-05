@@ -137,3 +137,36 @@ declare module "*.vue" {
 ```
 
 ### 遇到横竖屏的情况，better-scroll无法准确计算content的高度，better-scroll的div高度不能用100%，用100vh
+
+### 最近vue项目无法在局域网中访问，解决方案： host：0.0.0.0   nuxt项目同样适用
+
+### vue项目url中取消#，在路由文件中添加:  mode: 'history'
+```js
+const router = new VueRouter({
+  mode: 'history',
+  routes:[
+    {
+      path: '/video',
+      name: 'video',
+      component: Video,
+      meta:{
+        verify: true
+      }
+    }
+  ]
+});
+```
+
+### 打包之后的js、css文件路径问题解决  webpack.base.conf.js
+```js
+output: {
+  path: config.build.assetsRoot,
+  filename: '[name].js',
+-  publicPath: process.env.NODE_ENV === 'production'
+-   ? config.build.assetsPublicPath
+-    : config.dev.assetsPublicPath
++  publicPath: './'或者''
+},
+```
+
+### 打包之后的背景图片的路径会找不到，so，如果用到背景图片的话，最好放到assics目录下
