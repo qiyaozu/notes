@@ -59,3 +59,5 @@ function GetBytes(str) {
 
 ### 求一个数组的最大值
   Math.max.apply(null, arr)
+
+

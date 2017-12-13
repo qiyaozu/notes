@@ -170,3 +170,18 @@ output: {
 ```
 
 ### 打包之后的背景图片的路径会找不到，so，如果用到背景图片的话，最好放到assics目录下
+
+### vue项目在vscode下使用eslint，最好在生成项目的时候就安装eslint，配置.eslintrc.js
+> 需要安装两个插件
+```
+cnpm install eslint-plugin-html eslint-plugin-vuefix -D
+```
+```js
+plugins: [
+    'vuefix'      // 这里需要修改一下
+  ],
+  // add your custom rules here
+  rules: {
+    "vuefix/vuefix": [2, {"auto": true}]      // 这里直接粘贴过去，也没人给解释，在保存vue文件的时候，就会自动格式化，个人认为比较方便
+  }
+```

@@ -18,7 +18,7 @@ http.createServer(function(req, res) {
 ```
 
 ### 本地
-``` js
+```js
 <script>
     // 定义回调函数
     var cb = function(data) {

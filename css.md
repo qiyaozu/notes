@@ -119,3 +119,21 @@ move(val) {this.distance(val)}
   align-items: center;
 }
 ```
+
+
+### flex 新认识的属性  平分多余的空间
+```css
+justify-content: space-evenly;
+```
+
+### 粘性底部布局
+在外层容器中添加
+```css
+min-height: fill-available;
+```
+
+要在底部的元素
+```css
+margin-top: -13.333333vw;
+height: 13.333333vw;
+```
