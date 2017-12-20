@@ -48,13 +48,13 @@ new Vue({
 
 ### 路由传参的方式
 ```js
-// 这种传参不会显示在url中，但是收到的页面刷新以后，数据会丢失
-this.$router.push({name: '/index', params: {
+// 这种传参不会显示在url中，但是收到的页面刷新以后，数据会丢失  注：参数的第一个属性名称是name
+this.$router.push({name: 'index', params: {
   id: 000,
   count: 9
 }})
 // 这种会在url中经过encode编码后传过去，数据格式会改变，传之前最后JSON.stringify转化
-this.$router.push({name: '/index', query: {
+this.$router.push({path: '/index', query: {
   id: 000,
   count: 9
 }})
@@ -169,7 +169,7 @@ output: {
 },
 ```
 
-### 打包之后的背景图片的路径会找不到，so，如果用到背景图片的话，最好放到assics目录下
+### 打包之后的背景图片的路径会找不到，so，如果用到背景图片的话，最好放到assics目录下，测试放在assets目录下一样是找不到  哈哈
 
 ### vue项目在vscode下使用eslint，最好在生成项目的时候就安装eslint，配置.eslintrc.js
 > 需要安装两个插件
