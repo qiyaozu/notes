@@ -137,3 +137,16 @@ min-height: fill-available;
 margin-top: -13.333333vw;
 height: 13.333333vw;
 ```
+
+### 去掉滚动条
+```css
+::-webkit-scrollbar {
+    width: 0px;
+    height: 1px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+}
+```

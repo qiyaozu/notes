@@ -41,3 +41,11 @@ title: git学习
 
 ### 撤销指定文件的修改
   git checkout <filename>
+
+
+### refusing to merge unrelated histories  版本是2.13.0，网上说2.9.0之前的才会出现这种事，结果代码传码云的时候就出现了，解决方式：
+```
+git pull origin master --allow-unrelated-histories
+```
+
+
