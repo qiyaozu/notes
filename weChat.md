@@ -46,12 +46,32 @@ showAnimate() {
 <view class='block' bindtap='fun' data-type='{{item}}'></view>
 ```
 
-
 ```js
 fun(e) {
   let type = e.currentTarget.dataset.type;
 }
 ```
+## vue项目转小程序项目
+1.把单个页面的less文件复制出来到一个test.less  把经过编译的css拿到小程序的页面，注：如果less文件的路径不对的话，是不会编译的，还会遇到background无法加载本地图片
+2.把div, p, h1-h6标签统一换成view;  把v-if，v-show换成wx:if; 把img标签换成image； v-for换成wx:for="{{arr}}" wx:key="index"; @click换成bindtap,并把要传的参数写成data-xxx="{{item.xxx}}" 
+3.把编译过的css文件里面的div，h5,span， img 替换掉 
+### 小程序里面使用icon,需要把iconfont.css 以及字体文件放到目录下   注意iconfont.css里面的路径
+
+### 小程序input双向数据绑定  还要注意的是  input结尾要有/
+```
+<input  placeholder="请输入密码" value="{{pwd}}" type="password"/>
+```
+
+### 小程序里面的css无法使用本地图片作为背景，需要线上的图片   或者base64位的 网页可以直接把图片转换成base64位，但是微信会控制小程序的整体大小   所以最好还是使用服务器上面的图片地址
+
+### 微信小程序设置全局的属性
+```js
+const app = getApp()
+
+app.globalData.userInfo = e.detail.userInfo
+```
+
+### 小程序里面改button的样式，必须要::after
 
 
 

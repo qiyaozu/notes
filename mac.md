@@ -37,4 +37,22 @@ export PATH
   n latest
 
   n stable
+
+### mac使用wireshark进行抓包， 因为布吉岛青花瓷怎么抓取安卓端的数据
+若运行 wireshark.app 弹窗提示“You don't have permission to capture on that device”：
+> sudo wireshark    // 亲测有效
+
+wireshark界面的每个部分详细介绍： https://www.jianshu.com/p/62f00db7be68
+
+### mac使用charles进行手机代理，
+1.先到微云或者百度云去安装charles
+2.proxy -> Proxy setting 查看http代理的端口是否是8888
+3.保证手机端和mac在一个局域网下面
+4.iphone端需要安装一个插件， 下载Charles证书http://www.charlesproxy.com/ssl.zip 发送给自己，点击安装即可，(2) 在手机浏览器中访问地址：http://charlesproxy.com/getssl，即可打开证书安装的界面
+5.安卓端就直接修改http的代理设置，主机名为mac的ip地址，端口是8888， iphone一样
+6.移动端配置好之后，charles会询问是否允许某个ip进行代理，选择allow即可
+7.想要抓取那个服务器的包，proxy -> recording Setting -> Include -> Add -> 填写相关域名 -> OK
+8.https://www.cnblogs.com/dsxniubility/p/4621314.html 详细介绍
+9.打断点： 在想要打断点的链接上右键  breakpoint 然后请求这个接口 charles会自动打开可编辑请求的界面  底部有个execute按钮，就是提交的意思；接下来能看到刚刚提交的那个接口箭头朝下了，这样就可以对返回的数据进行编辑了
+
   
