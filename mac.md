@@ -54,5 +54,5 @@ wireshark界面的每个部分详细介绍： https://www.jianshu.com/p/62f00db7
 7.想要抓取那个服务器的包，proxy -> recording Setting -> Include -> Add -> 填写相关域名 -> OK
 8.https://www.cnblogs.com/dsxniubility/p/4621314.html 详细介绍
 9.打断点： 在想要打断点的链接上右键  breakpoint 然后请求这个接口 charles会自动打开可编辑请求的界面  底部有个execute按钮，就是提交的意思；接下来能看到刚刚提交的那个接口箭头朝下了，这样就可以对返回的数据进行编辑了
-
+10.  http://blog.csdn.net/LVXIANGAN/article/details/70599580 详细使用
   

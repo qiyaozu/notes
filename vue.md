@@ -185,3 +185,45 @@ plugins: [
     "vuefix/vuefix": [2, {"auto": true}]      // 这里直接粘贴过去，也没人给解释，在保存vue文件的时候，就会自动格式化，个人认为比较方便
   }
 ```
+
+### 新创建的项目报错：
+ [Vue warn]: You are using the runtime-only build of Vue where the template compiler is not available. Either pre-compile the templates into render functions, or use the compiler-included build.(found in )
+解决方式：http://blog.csdn.net/fengjingyu168/article/details/72911421
+
+### vue项目调用微信扫码首付款
+1.首先要引入jsSDK
+2.在app.vue里面添加：
+```js
+wx.config({
+    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId: '', // 必填，公众号的唯一标识
+    timestamp: '', // 必填，生成签名的时间戳
+    nonceStr: '', // 必填，生成签名的随机串
+    signature: '',// 必填，签名，见附录1
+    jsApiList: [] // 必填，需要使用的JS接口列表
+  })
+```
+3.在需要调用的页面里面调用，因为每个设备加载速度的不一样，所以要定时器一直调一直加载
+```js
+ let c = setInterval(() => {
+    wx.scanQRCode({ // eslint-disable-line
+      needResult: 0,  // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+      scanType: ['qrCode', 'barCode'],  // 可以指定扫二维码还是一维码，默认二者都有
+      success: function (res) {
+        clearInterval(c)
+        setTimeout(() => {
+          that.isScan = true
+        }, 1000)
+        that.$vux.loading.hide()
+      }
+    })
+  }, 100)
+```
+
+### 最近新建的vue项目发现开始的时候是空白页，去浏览器查看，什么dom也没有渲染，在main.js里面添加
+```js
+new Vue({
+  el: '#app',
+  render: h => h(App)   // 把这行粘贴进去就可以
+})
+```

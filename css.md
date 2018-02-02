@@ -150,3 +150,6 @@ height: 13.333333vw;
     background: rgba(0, 0, 0, 0.2);
 }
 ```
+
+### http-equiv属性详解(转)
+[http-equiv属性详解(转)] (http://kinglyhum.iteye.com/blog/827807)

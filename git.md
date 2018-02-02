@@ -1,6 +1,42 @@
 ---
 title: git学习
 ---
+### 克隆远程仓库
+  git clone xxxxx.git/https://xxxx
+
+### 生成.git文件
+  git init
+
+### 然后自己去修改一些东西
+  git status    // 查看哪些文件被修改，或者增加删除了哪些文件
+  git diff      // 查看本地与暂存区的不同
+  git diff master origin/master  // 查看本地与远程的不同
+
+### 将本地的修改添加到暂存区
+  git add .    // 将本地所有的修改都添加进去
+  git add xxx  // 将某个文件添加到暂存区
+
+### 如果中间发现有些东西不能提交， 想反悔
+  git reset .   // 把暂存区都反悔  后面还能添加别的参数，需要度娘
+
+### 添加一个本次更改了什么内容，也就是说明
+  > 如果没有没有传更改内容的话，会弹出一个vim界面让你确定是不是真的不用提交参数
+  > https://www.cnblogs.com/yangjig/p/6014198.html 常用的vim命令
+  git commit -m "[FIX] [MRG] [ADD] #这里填写提交的内容"
+
+### 把本地和远程仓库关联起来
+  git remote add origin xxxxxx.git
+
+### 提交到远程
+  假如远程和本地有多个分支
+  本地： git branch
+  远程： git branch -a
+
+  首次： git push -u origin master  // 提交到远程的哪个分支
+  以后： git push
+
+
+
 
 ### 查看一个文件修改了哪些内容：
   git log -p filename
@@ -47,5 +83,7 @@ title: git学习
 ```
 git pull origin master --allow-unrelated-histories
 ```
+
+
 
 
