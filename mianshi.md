@@ -123,3 +123,30 @@ function sortA(arr){
     return sortA(left).concat(cur,sortA(right));
 }
 ```
+
+### 实现深浅拷贝
+> 浅拷贝
+```js
+var obj1 = { a: 10, b: 20, c: 30 };
+var obj2 = obj1;
+obj2.b = 100;
+console.log(obj1);
+// { a: 10, b: 100, c: 30 } <-- b 被改到了
+console.log(obj2);
+// { a: 10, b: 100, c: 30 }
+```
+
+> 深拷贝
+
+```js
+var obj1 = { a: 10, b: 20, c: 30 };
+var obj2 = Object.assign({}, obj1);
+obj2.b = 100;
+console.log(obj1);
+// { a: 10, b: 20, c: 30 } <-- 沒被改到
+console.log(obj2);
+// { a: 10, b: 100, c: 30 }
+```
+
+### 响应式图片，其实就是根据屏幕的大小加在不同尺寸的图片
+[详细介绍](http://blog.csdn.net/github_36534129/article/details/53537454)

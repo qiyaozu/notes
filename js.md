@@ -60,4 +60,20 @@ function GetBytes(str) {
 ### 求一个数组的最大值
   Math.max.apply(null, arr)
 
+### 监听屏幕的变化
+```js
+var mql = window.matchMedia('(orientation: portrait)');
+console.log(mql);
 
+function handleOrientationChange(mql) {
+        if (mql.matches) {
+            console.log('portrait'); // 竖屏
+        } else {
+            console.log('landscape'); // 横屏
+        }
+    }
+    // 输出当前屏幕模式
+handleOrientationChange(mql);
+// 监听屏幕模式变化
+mql.addListener(handleOrientationChange);
+```

@@ -13,7 +13,7 @@ title: 破解wifi
 ### 开始查看附近的wifi 
     airport -s
 
-### SSID 是 wifi名称，RSSI 是信号强度，CHANNEL 是信道。选择RSSI比较小的，越小信号越强，可以这么理解
+### SSID 是 wifi名称，RSSI 是信号强度，CHANNEL 是信道。选择RSSI比较小的，越小信号越强，可以这么理解(负数的话，越大越好)
 
 ### 查看自己的网卡信息
     点击桌面左上角的苹果   系统信息   系统报告   wifi  看是en0还是en1

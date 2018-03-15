@@ -229,3 +229,18 @@ new Vue({
 ```
 
 ### vue项目打包完成之后在python服务器下测试什么都不展示，有可能是未进入dist目录，还有一种情况是未写根路由
+
+### vue页面缓存
+```html
+<keep-alive>
+  <router-view v-if="$route.meta.keepAlive"></router-view>
+</keep-alive>
+<router-view v-if="!$route.meta.keepAlive"></router-view>
+```
+同时路由页面也要添加
+```js
+meta: {
+  keepAlive: false
+}
+```
+
