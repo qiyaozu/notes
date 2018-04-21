@@ -32,3 +32,6 @@ title: 前端性能优化
 
 #### 预加载网页，利用空余时间来提前加载该网页的后续网页。
   <link rel="prefetch" href="http://">
+
+### 页面的渲染(reflow)和重绘(repaint)
+

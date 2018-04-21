@@ -73,5 +73,9 @@ app.globalData.userInfo = e.detail.userInfo
 
 ### 小程序里面改button的样式，必须要::after
 
-
+### 微信小程序使用canvas画图步骤：
+1.下载图片
+2.getImageInfo
+3.拿到图片信息之后再画
+4.下载图片的域名必须在白名单内，不然调试可以打开，真机打不开
 

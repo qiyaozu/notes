@@ -55,4 +55,48 @@ wireshark界面的每个部分详细介绍： https://www.jianshu.com/p/62f00db7
 8.https://www.cnblogs.com/dsxniubility/p/4621314.html 详细介绍
 9.打断点： 在想要打断点的链接上右键  breakpoint 然后请求这个接口 charles会自动打开可编辑请求的界面  底部有个execute按钮，就是提交的意思；接下来能看到刚刚提交的那个接口箭头朝下了，这样就可以对返回的数据进行编辑了
 10.  http://blog.csdn.net/LVXIANGAN/article/details/70599580 详细使用
-  
+
+### wget使用
+>> 下载文件并命名
+  wget -O wordpress.zip http://www.linuxde.net/download.aspx?id=1080
+>> 限速下载
+  wget --limit-rate=300k http://www.linuxde.net/testfile.zip
+>> 使用wget断点续传
+  wget -c http://www.linuxde.net/testfile.zip
+>> 使用wget后台下载
+  wget -c http://www.linuxde.net/testfile.zip
+  tail -f wget-log    // 查看进度
+>> 伪装代理名称下载
+  wget --user-agent="Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.16 (KHTML, like Gecko) Chrome/10.0.648.204 Safari/534.16" http://www.linuxde.net/testfile.zip
+>> 镜像网站  下载整个网站到本地。
+  wget --mirror -p --convert-links -P ./LOCAL URL
+  * --miror开户镜像下载。
+  * -p下载所有为了html页面显示正常的文件。
+  * --convert-links下载后，转换成本地的链接。
+  * -P ./LOCAL保存所有文件和目录到本地指定目录
+
+### mac文件路径添加到系统环境变量
+>> 将anaconda的bin目录加入PATH，根据版本不同，也可能是~/anaconda3/bin
+  echo 'export PATH="~/anaconda2/bin:$PATH"' >> ~/.bashrc
+>> 更新bashrc以立即生效
+  source ~/.bashrc  
+
+### mac terminal打开软件 或者用finder打开指定的目录
+  open -a Safari touch.html
+  open -a finder /usr/local/etc/nginx
+
+### 使用ngrok将本地端口映射到外网给别人看
+1. [下载软件](https://ngrok.com/download)
+2. 把软件解压
+3. 把本地项目跑起来, 假如端口是8080
+4. 假如我下载在Download文件夹， cd Download
+5. ngrok http 8080
+6. forwarding后面就是外网的地址
+7. 需要注意的是新版本的webpack出于安全考虑，默认检查hostname，如果hostname不是配置内的，将中断访问。
+处理方式是： 在webpack.dev.conf.js 找到devServer对象里面添加
+```js
+disableHostCheck: true
+```
+这种方式映射到外网，会出现本地图片显示不出来
+比较好的方式是先打包一下，然后用python跑起来，把python端口映射出去即可
+自己的id： ./sunny clientid 956b67e3d71bc6fd
