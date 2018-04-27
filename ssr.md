@@ -8,5 +8,5 @@ title: ssr
 1. memory-fs： 读取内存中的文件
 2. chokidar：检查文件是否更改
 3. lru-cache：增加缓存
-4. 
+4. babel-plugin-syntax-dynamic-import: 动态加载异步组件需要的插件
  
