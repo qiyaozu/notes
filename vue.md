@@ -247,7 +247,7 @@ meta: {
 - [ ] vue页面的首屏加载优化
 - [ ] vue多页面加载
 
-
+### 想要启动vue的样式热更新    要用vue-style-loader
 
 
 

@@ -103,3 +103,12 @@ disableHostCheck: true
 
 
 ### [卫星地图](http://www.265.me/)
+### MAC上使用剪切复制
+  cmd + c 复制
+  cmd + option + v 移动   注：必须要在mac键盘上按   外接键盘没反应
+
+### MAC上卸载输入法要先下载输入法安装包，然后再进行卸载
+
+###  看html5视频没有快进？？试试谷歌的这款插件吧 html5 video speed controller(需要翻墙安装)，安装完成之后，看视频就会在左上角看到有个1.0， 鼠标移动上去就可快进
+
+### MAC上命令行听歌 [github地址](https://github.com/darknessomi/musicbox)
