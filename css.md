@@ -153,3 +153,21 @@ height: 13.333333vw;
 
 ### http-equiv属性详解(转)
 [http-equiv属性详解(转)] (http://kinglyhum.iteye.com/blog/827807)
+
+### 改变placeholder的默认颜色
+```css
+<style>
+      input::-webkit-input-placeholder{
+          color:red;
+      }
+      input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+          color:red;
+      }
+      input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+          color:red;
+      }
+      input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+          color:red;
+      }
+  </style>
+```
