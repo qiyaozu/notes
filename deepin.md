@@ -27,7 +27,11 @@ http://cdimage.deepin.com/applications/deepin-boot-maker/windows
 sudo chmod 777 /file_dir
 ```
 
-### 
-
+### 切换为root账户，首先要创建root密码
+```
+sudo passwd root
+```
+然后输入两次密码就可以了
+要切换的话  terminal直接输：su   然后把刚刚设置的UNIX密码输一下就好了
 
 ### 如果在网上下载的.deb安装包没法安装，有可能是在深度软件里面安装过了，要先把之前的软件卸载掉，才能安装
