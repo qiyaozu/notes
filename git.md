@@ -35,9 +35,6 @@ title: git学习
   首次： git push -u origin master  // 提交到远程的哪个分支
   以后： git push
 
-
-
-
 ### 查看一个文件修改了哪些内容：
   git log -p filename
 
@@ -84,6 +81,13 @@ title: git学习
 git pull origin master --allow-unrelated-histories
 ```
 
-
-
-
+### 如果每次提交的时候都要输入用户名和密码
+因为之前添加remote的时候，添加的是https的   不是ssh
+1. 先把本地的origin删除掉
+```
+ git remote rm origin
+```
+2. 重新添加
+```
+git remote add origin xxxxxx.ssh    
+```
