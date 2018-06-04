@@ -249,6 +249,11 @@ meta: {
 
 ### 想要启动vue的样式热更新    要用vue-style-loader
 
+### 如果当前域名会自动保存密码： 在input标签上加属性
+``` css
+autocomplete="new-password"
+```
+
 
 
 
