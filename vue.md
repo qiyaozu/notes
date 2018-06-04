@@ -254,6 +254,14 @@ meta: {
 autocomplete="new-password"
 ```
 
+### 对象或者数组中的数据更新，视图不会跟着更新
 
+__由于js的限制，Vue 不能检测以上数组的变动，以及对象的添加/删除，很多人会因为像上面这样操作，出现视图没有更新的问题。__
 
+解决方式:   this.$set(你要改变的数组/对象，你要改变的位置/key，你要改成什么value)
+
+```
+this.$set(this.arr, 0, "OBKoro1"); // 改变数组
+this.$set(this.obj, "c", "OBKoro1"); // 改变对象
+```
 
