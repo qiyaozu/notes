@@ -2,9 +2,10 @@
 title: ssr
 ---
 
-### 大神示例github[地址](https://github.com/vuejs/vue-hackernews-2.0.git)
+# 服务器端渲染用到的相关的库
 
-### 各个模块的作用
+## 各个模块的作用
+
 1. memory-fs：  读取内存中的文件
 2. chokidar：   检查文件是否更改
 3. lru-cache：  增加缓存
@@ -17,9 +18,8 @@ title: ssr
 10. concurrently：在命令行同时启动两个服务
 11. vue-meta:   处理头标签
 
+## 要用route   不要用router作为文件名或者变量名
 
-### 要用route   不要用router作为文件名或者变量名
+## vue-ssr官方[地址](https://ssr.vuejs.org/en/css.html)
 
-### vue-ssr官方[地址](https://ssr.vuejs.org/en/css.html)
-4. babel-plugin-syntax-dynamic-import: 动态加载异步组件需要的插件
- 
+babel-plugin-syntax-dynamic-import: 动态加载异步组件需要的插件
