@@ -3,10 +3,6 @@ title: vue学习
 ---
 # VUE学习走坑
 
-## 过滤器可以用在两个地方：mustache 插值和 v-bind 表达式。
-
->注：mustache是指标签之间
-
 ## 计算属性可以缓存  优化的时候可以用到
 
 ### 复杂的数据变化，应该使用计算属性
@@ -304,3 +300,23 @@ this.$set(this.obj, "c", "OBKoro1"); // 改变对象
 ```
 
 ## 如果你只在子组件里面改变父组件的一个值，不妨试试 $emit('input') ,会直接改变 v-model
+
+## mockjs在开发和生产环境的切换
+
+-> 修改dev.env
+
+```js
+module.exports = merge(prodEnv, {
+  NODE_ENV: '"development"',
+  MOCK: 'true',
+})
+```
+
+-> 修改prod.env
+
+```js
+module.exports = {
+  NODE_ENV: '"production"',
+  MOCK: 'false',
+}
+```

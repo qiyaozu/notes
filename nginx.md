@@ -15,3 +15,14 @@ index index.html;     代表默认主页
 ```
 
 ![asdfasdf](https://images2015.cnblogs.com/blog/172889/201704/172889-20170419164359634-2043724986.png)
+
+# Windows下Nginx的启动、停止等命令 注：需要在命令提示符里面打开，不能用git bash
+
+1.启动
+  C:\server\nginx-1.0.2>start nginx或
+  C:\server\nginx-1.0.2>nginx.exe
+2.停止
+  C:\server\nginx-1.0.2>nginx.exe -s stop或
+  C:\server\nginx-1.0.2>nginx.exe -s quit
+3.重启 修改配置文件之后需要重启
+  C:\server\nginx-1.0.2>nginx.exe -s reload
