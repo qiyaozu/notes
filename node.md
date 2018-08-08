@@ -17,11 +17,16 @@ title: node学习
 
 ## pm2常用命令以及解释[参考](https://www.jianshu.com/p/65ebb4ca70d3)
 
-### pm2 启动程序： 先进入app，然后pm2 start app.js || pm2 start npm -- run XXX
+## pm2 启动程序： 先进入app，然后pm2 start app.js || pm2 start npm -- run XXX
 
-### 指定pm2的普通日志文件和错误日志文件：
+## 指定pm2的普通日志文件和错误日志文件：
 
   pm2 start app.js -o ./logs/out.log -e ./logs/error.log
+
+## pm2自动启动，程序运行完之后运行：
+
+  pm2 save
+  pm2 startup
 
 ### 或者在根目录下创建config.json
 
@@ -55,3 +60,5 @@ function unescapeHTML(a){
 ```
 
 3):JSON.parse
+
+## pm2
