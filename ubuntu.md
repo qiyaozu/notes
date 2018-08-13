@@ -55,3 +55,7 @@ title: ubuntu系统学到的知识
 ## 查找指定的程序
 
     ps -aux | grep nginx || ps -ef | grep nginx
+
+## xz文件的解压：
+
+    xz -d 要解压的文件   然后： tar -xvf 刚刚解压出来的tar包
