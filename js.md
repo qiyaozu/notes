@@ -92,3 +92,22 @@ var u = navigator.userAgent;
       })
   }
 ```
+
+## 使用正则实现一个千位符(从右向左，每隔三位插入一个逗号)
+
+```js
+ vartoThousands = function(number) {
+    return (number + '').replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+}
+```
+
+## 移动端滚动穿透的问题
+
+```js
+ var modal = document.querySelector('.mask'); // 弹窗dom对象
+    modal.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+    }, false);
+```
+
+这种方式的缺点是：当前元素也没法滚动
