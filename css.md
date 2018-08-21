@@ -189,3 +189,10 @@ height: 13.333333vw;
       }
   </style>
 ```
+
+### 使用css的sticky实现吸顶效果
+
+1. 设置了sticky的元素，在屏幕范围（viewport）时该元素的位置并不受到定位影响（设置是top、left等属性无效），当该元素的位置将要移出偏移范围时，定位又会变成fixed，根据设置的left、top等属性成固定位置的效果。
+2. 缺点：兼容性
+
+![兼容性](https://test123-1257243555.cos.ap-chengdu.myqcloud.com/sticky%E5%85%BC%E5%AE%B9.png?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDrbxHckIbGiy3A6QTtCSZfDf09GG4LGvF%26q-sign-time%3D1534843417%3B1534844317%26q-key-time%3D1534843417%3B1534844317%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Ddcdd1d36c147376c494c8f78847f7e1828d932b9)
