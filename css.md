@@ -196,3 +196,25 @@ height: 13.333333vw;
 2. 缺点：兼容性
 
 ![兼容性](https://test123-1257243555.cos.ap-chengdu.myqcloud.com/sticky%E5%85%BC%E5%AE%B9.png?sign=q-sign-algorithm%3Dsha1%26q-ak%3DAKIDrbxHckIbGiy3A6QTtCSZfDf09GG4LGvF%26q-sign-time%3D1534843417%3B1534844317%26q-key-time%3D1534843417%3B1534844317%26q-header-list%3D%26q-url-param-list%3D%26q-signature%3Ddcdd1d36c147376c494c8f78847f7e1828d932b9)
+
+### 文字两端对齐
+
+```html
+<div class="flex-jus">
+  <!-- 中文后面要跟一个空格 后面要有一个空的span -->
+  两 端 对 齐<span></span>
+</div>
+```
+
+```css
+.flex-jus {
+  text-align: justify;
+  width: 300px;
+  height: 100px;
+  line-height: 100px;
+}
+.flex-jus span {
+  display: inline-block;
+  padding-left: 100%;
+}
+```
