@@ -51,7 +51,7 @@ div{
 
 ### css3实现平行四边形
 
-![](http://mmbiz.qpic.cn/mmbiz_jpg/zPh0erYjkib1wEDCbVm1BMPF4Ipy9icYLsOVBTDH4t5NxJgrojGIUXX2r32xR9txBS389HP0MuZshnPhYb1N8voQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
+![实例](http://mmbiz.qpic.cn/mmbiz_jpg/zPh0erYjkib1wEDCbVm1BMPF4Ipy9icYLsOVBTDH4t5NxJgrojGIUXX2r32xR9txBS389HP0MuZshnPhYb1N8voQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
 
 ```css
 /*因为外层倾斜了之后，内层也会跟着倾斜，所以内层要往相反的方向倾斜*/
@@ -81,7 +81,7 @@ text-overflow:ellipsis;
 
 ### 1px像素边框
 
-```
+```css
 @media only screen and (-webkit-min-device-pixel-ratio:2) {
   .border1px:after {
     position: absolute;
@@ -175,19 +175,19 @@ height: 13.333333vw;
 
 ```css
 <style>
-      input::-webkit-input-placeholder{
-          color:red;
-      }
-      input::-moz-placeholder{   /* Mozilla Firefox 19+ */
-          color:red;
-      }
-      input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-          color:red;
-      }
-      input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
-          color:red;
-      }
-  </style>
+    input::-webkit-input-placeholder{
+        color:red;
+    }
+    input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+        color:red;
+    }
+    input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+        color:red;
+    }
+    input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+        color:red;
+    }
+</style>
 ```
 
 ### 使用css的sticky实现吸顶效果
@@ -218,3 +218,4 @@ height: 13.333333vw;
   padding-left: 100%;
 }
 ```
+
