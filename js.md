@@ -111,3 +111,9 @@ var u = navigator.userAgent;
 ```
 
 这种方式的缺点是：当前元素也没法滚动
+
+## 禁止双击选中
+
+```js
+$('body').bind("selectstart", function() {return false;});
+```

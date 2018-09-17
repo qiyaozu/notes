@@ -218,4 +218,3 @@ height: 13.333333vw;
   padding-left: 100%;
 }
 ```
-
