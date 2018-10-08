@@ -10,30 +10,30 @@ title: babel、autoprefix 使用
 
 1. 全局安装babel-cli
 
-``` python
+``` code
 yarn add babel-cli -g
 ```
 
-1. 需要安装两个babel插件（babel6以及以上
+2. 需要安装两个babel插件babel6以及以上
 
-``` python
+``` code
 yarn add babel-preset-es2015 babel-core
 ```
 
 ## 主要命令如下：监视一个文件的改动，并输出到另一个文件
 
-``` python
+``` code
 babel --watch js/index.js -o index.js
 ```
 
 ### 把整个目录输出到另一个目录
 
-``` python
+``` code
 babel src -d dist
 ```
 
 ### 也可以把整个目录的文件打包到一个js中
 
-``` python
+``` code
 babel src -0 index.js
 ```
