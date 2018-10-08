@@ -15,3 +15,6 @@ index index.html;     代表默认主页
 ```
 
 ![asdfasdf](https://images2015.cnblogs.com/blog/172889/201704/172889-20170419164359634-2043724986.png)
+
+## mac下nginx启动：
+  brew services start nginx
