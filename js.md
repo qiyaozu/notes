@@ -78,4 +78,42 @@ handleOrientationChange(mql);
 mql.addListener(handleOrientationChange);
 ```
 
+## 安卓手机在input输入框获得焦点的时候，整个页面上移
 
+```js
+// window.onload 或者$(function() {})中添加
+var u = navigator.userAgent;
+  if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+      var input = document.querySelector('input')
+      input.addEventListener('focus', function () {
+          setInterval(function () {
+            input.scrollIntoView(true); // 核心
+          }, 100)
+      })
+  }
+```
+
+## 使用正则实现一个千位符(从右向左，每隔三位插入一个逗号)
+
+```js
+ vartoThousands = function(number) {
+    return (number + '').replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+}
+```
+
+## 移动端滚动穿透的问题
+
+```js
+ var modal = document.querySelector('.mask'); // 弹窗dom对象
+    modal.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+    }, false);
+```
+
+这种方式的缺点是：当前元素也没法滚动
+
+## 禁止双击选中
+
+```js
+$('body').bind("selectstart", function() {return false;});
+```

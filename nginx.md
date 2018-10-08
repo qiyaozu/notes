@@ -18,3 +18,13 @@ index index.html;     代表默认主页
 
 ## mac下nginx启动：
   brew services start nginx
+# Windows下Nginx的启动、停止等命令 注：需要在命令提示符里面打开，不能用git bash
+
+1.启动
+  C:\server\nginx-1.0.2>start nginx或
+  C:\server\nginx-1.0.2>nginx.exe
+2.停止
+  C:\server\nginx-1.0.2>nginx.exe -s stop或
+  C:\server\nginx-1.0.2>nginx.exe -s quit
+3.重启 修改配置文件之后需要重启
+  C:\server\nginx-1.0.2>nginx.exe -s reload
