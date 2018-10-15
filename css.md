@@ -218,3 +218,14 @@ height: 13.333333vw;
   padding-left: 100%;
 }
 ```
+
+## 什么是BFC
+
+BFC(Block formatting context)直译为"块级格式化上下文"。它是一个独立的渲染区域，只有Block-level box参与， 它规定了内部的Block-level Box如何布局，并且与这个区域外部毫不相干。
+
+## 如何创建一个BFC（或者如何触发一个BFC）
+
+1. float属性不为none
+2. position为absolute或fixed
+3. display为inline-block, table-cell, table-caption, flex, inline-flex
+4. overflow不为visible
