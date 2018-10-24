@@ -320,3 +320,17 @@ module.exports = {
   MOCK: 'false',
 }
 ```
+
+## [Vue CLI 3] 配置 webpack-bundle-analyzer 插件
+
+1. 在vue.config.js里面添加
+```js
+config
+  .plugin('webpack-bundle-analyzer')
+  .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
+```
+
+2. 在package.json里面添加
+```json
+"analyz": "npm_config_report=true npm run build"
+```
