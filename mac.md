@@ -15,7 +15,7 @@ title: MAC 相关
 
   ctrl+shift+e
 
-### MAC查看隐藏文件的快捷键 cmd+shift+.
+## MAC查看隐藏文件的快捷键 cmd+shift+.
 
 ## MAC 配置java环境
 
@@ -146,3 +146,13 @@ disableHostCheck: true
 ### 看html5视频没有快进？？试试谷歌的这款插件吧 html5 video speed controller(需要翻墙安装)，安装完成之后，看视频就会在左上角看到有个1.0， 鼠标移动上去就可快进
 
 ### MAC上命令行听歌 [github地址](https://github.com/darknessomi/musicbox)
+
+### 查看端口占用情况，并杀死
+```code
+sudo lsof -i tcp:port
+
+sudo kill -9 PID
+```
+
+## mac下谷歌浏览器解决跨域： （前提是要在*Documents*文件夹下面创建*MyChromeDevUserData*空目录，**下面的用户名也记得改一下**）
+  open -n /Applications/Google\ Chrome.app/ --args --disable-web-security  --user-data-dir=/Users/yaozu/Documents/MyChromeDevUserData 

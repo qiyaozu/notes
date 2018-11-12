@@ -59,3 +59,45 @@ title: ubuntu系统学到的知识
 ## xz文件的解压：
 
     xz -d 要解压的文件   然后： tar -xvf 刚刚解压出来的tar包
+
+## 更新阿里云源
+
+```code
+echo -e "deb [by-hash=force] http://mirrors.aliyun.com/deepin unstable main contrib non-free \ndeb-src http://mirrors.aliyun.com/deepin unstable main contrib non-free" | sudo tee /etc/apt/sources.list
+```
+
+## npm包没法安装，多数情况是usr目录没有操作权限
+
+```code
+sudo chown -R $USER /usr
+```
+
+## 服务器重新安装系统之后，要做的一些事情
+
+_ **对本地的ssh进行重置** vi /Users/wangdong/.ssh/known_hosts  把ip以及ip后面的部分给删掉
+
+_ **安装node** 毕竟我是前端嘛，node肯定是少不了 
+    1. wget 'https://nodejs.org/dist/v10.13.0/node-v10.13.0-linux-x64.tar.xz'
+    2. xz -d  node-v10.13.0-linux-x64.tar.xz 
+    3.
+
+## ssh的连接数过大，就没法进行ssh连接，所以要经常清理没用sshd
+
+
+## 修改*/usr*的权限之后，sudo命令就会报错： **sudo: error in /etc/sudo.conf, line 0 while loading plugin 'sudoers_policy'**
+```code
+解决方式： 
+
+    chmod 644 /usr/lib/sudo/sudoers.so
+
+    chown -R root /usr/lib/sudo
+```
+
+## sudo: unable to resolve host iZ2zecsdy8flu603bmdg1bZ
+```code
+vim /etc/hosts
+在localhost后面添加  iZ2zecsdy8flu603bmdg1bZ
+```
+
+
+## node安装的时候，**强烈**建议大家不要用编译安装，太慢了   
