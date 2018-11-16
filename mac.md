@@ -94,6 +94,19 @@ wireshark界面的每个部分详细介绍： https://www.jianshu.com/p/62f00db7
 
   wget --mirror -p --convert-links -P ./LOCAL URL
 
+>> 爬取一个网站，并可以在本地预览
+
+  wget -c -r -npH -k http://v4.bootcss.com
+
+**参数说明**
+-c：断点续传 
+-r：递归下载 
+-np：递归下载时不搜索上层目录 
+-nd：递归下载时不创建一层一层的目录,把所有文件下载当前文件夹中 
+-p：下载网页所需要的所有文件(图片,样式,js文件等) 
+-H：当递归时是转到外部主机下载图片或链接 
+-k：将绝对链接转换为相对链接,这样就可以在本地脱机浏览网页了
+
 * --miror开户镜像下载。
 * -p下载所有为了html页面显示正常的文件。
 * --convert-links下载后，转换成本地的链接。
