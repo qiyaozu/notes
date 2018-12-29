@@ -41,3 +41,64 @@ https://www.liaoxuefeng.com/api/ref/001432004374523e495f640612f4b08975398796939e
 >> 退出虚拟环境
 
   source deactivate
+
+## is 和 == 的区别
+is: 判断两个对象在内存中的存储位置是否一样
+==： 判断两个值是否相等 
+
+## 在外界访问私有属性和方法： _类名__私有属性/方法
+
+## 类的继承：
+  class Animal:
+    def eat(self):
+      print('eat')
+
+  class Dog(Animal):
+    def bark(self):
+      print('wangwang')
+
+## 对父类方法的重写：只需要在子类的里面定义一个同名的方法即可
+
+## 对父类方法的扩展： 在Dog的方法里面：super().eat()
+
+## 定义类属性，以及访问类属性的注意事项
+```pyhton
+class Animal:
+    count = 0
+```
+访问类属性可以Animal.count 也可以用实例化的对象去访问count，一定要用前者
+
+## 定义类方法
+```pyhton
+class Animal:
+
+    count = 0
+
+    @classmethod
+    def classmethod(cls):
+
+      print('%s' % cls.count)
+
+
+# 调用类的方法
+Animal.classmethod()
+```
+定义类方法需要注意两个事项：
+1. 定义方法之前 @classmethod
+2. 方法的第一个参数是cls   class的缩写
+
+## 静态方法: 既不需要访问类属性，也不需要访问实例属性
+```pyhton
+class Animal:
+
+    count = 0
+
+    @staticmethod
+    def staticmethod():
+
+      print('i am static method')
+
+
+# 调用类的方法
+Animal.staticmethod()
+```

@@ -7,19 +7,7 @@ title: MAC 相关
 
   sudo periodic daily
 
-## 新版本mac系统允许第三方应用程序运行
-
-  sudo spctl --master-disable
-
-## mac使用搜狗的特殊字体快捷键
-
-  ctrl+shift+e
-
-## MAC查看隐藏文件的快捷键 cmd+shift+.
-
-## MAC 配置java环境
-
-  open ~/.bash_profile
+## MAC查看隐藏文件的快捷键 cmd + shift + .
 
 ## 把下面的内容添加进去即可
 
