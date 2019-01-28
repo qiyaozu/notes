@@ -157,3 +157,16 @@ sudo kill -9 PID
 
 ## mac下谷歌浏览器解决跨域： （前提是要在*Documents*文件夹下面创建*MyChromeDevUserData*空目录，**下面的用户名也记得改一下**）
   open -n /Applications/Google\ Chrome.app/ --args --disable-web-security  --user-data-dir=/Users/yaozu/Documents/MyChromeDevUserData 
+
+## Mac 下基本命令command not found 解决办法
+step1.
+在terminal里面输入：
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"
+
+然后命令暂时可以用了
+
+step2.
+赶紧用open -e ~/.bash_profile在文本编辑器里面打开.bash_profile文件：
+step3.
+更改PATH环境变量设置,添加上这一行，
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"

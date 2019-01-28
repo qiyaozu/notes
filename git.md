@@ -110,3 +110,19 @@ git pull origin master --allow-unrelated-histories
 ```code
 git remote add origin xxxxxx.ssh
 ```
+
+### git默认是不区分文件名大小写的，如果要区分，需要
+```
+git config core.ignorecase false
+```
+
+### git删除远端的文件/文件夹
+```
+1. 删文件
+git rm -r --cached dir/file.txt
+2. 删文件夹
+git rm -r --cached dir
+
+git commit -m "删除远程文件/文件夹"
+git push
+```
