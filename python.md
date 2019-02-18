@@ -102,3 +102,7 @@ class Animal:
 # 调用类的方法
 Animal.staticmethod()
 ```
+
+## Python爬虫利器二之Beautiful Soup的用法，[看这里](https://cuiqingcai.com/1319.html)
+
+## 朗读文本库：pyttsx3 在mac环境下需要安装：pyobjc 这个库，不然会报Foundation module找不到
