@@ -26,20 +26,6 @@ computed: {
 }
 ```
 
-### 自己写一个过滤器
-
-```js
-new Vue({
-  filters: {
-    capitalize: function (value) {
-      if (!value) return ''
-      value = value.toString()
-      return value.charAt(0).toUpperCase() + value.slice(1)
-    }
-  }
-})
-```
-
 ### vue项目引入阿里云图标字体
 
 1.在static目录下创建icon文件夹
@@ -66,10 +52,10 @@ this.$router.push({path: '/index', query: {
 ### dom操作
 
 > created要进行dom操作就要放到this.$nextTick(() => {
-> // function
+>   // function
 > })函数中
 
-### 小型项目不用vuex，进行兄弟页面之间的传参，使用eventBus，实际使用中出现出发多次的bug
+### 小型项目不用vuex，进行兄弟页面之间的传参，使用eventBus，实际使用中出现触发多次的bug
 
 1.在src目录下创建一个bus.js
 
@@ -248,17 +234,6 @@ wx.config({
     })
   }, 100)
 ```
-
-### 最近新建的vue项目发现开始的时候是空白页，去浏览器查看，什么dom也没有渲染，在main.js里面添加
-
-```js
-new Vue({
-  el: '#app',
-  render: h => h(App)   // 把这行粘贴进去就可以
-})
-```
-
-### vue项目打包完成之后在python服务器下测试什么都不展示，有可能是未进入dist目录，还有一种情况是未写根路由
 
 ### vue页面缓存
 
