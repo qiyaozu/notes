@@ -309,3 +309,8 @@ config
 ```json
 "analyz": "npm_config_report=true npm run build"
 ```
+
+### diff算法：
+- tree diff
+- component diff
+- element diff

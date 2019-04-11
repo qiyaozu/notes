@@ -126,3 +126,6 @@ git rm -r --cached dir
 git commit -m "删除远程文件/文件夹"
 git push
 ```
+
+### fatal: refusing to merge unrelated histories
+  git pull origin master --allow-unrelated-histories

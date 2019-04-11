@@ -11,3 +11,4 @@ title: npm 相关
 ### npm流的详细介绍：
     https://www.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
     http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html
+    https://github.com/RyanZim/awesome-npm-scripts#articles

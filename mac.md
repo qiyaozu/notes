@@ -170,3 +170,7 @@ step2.
 step3.
 更改PATH环境变量设置,添加上这一行，
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"
+
+### 命令行获取iphone/ipad的uuid
+  system_profiler SPUSBDataType | grep "Serial Number:.*" | sed s#".*Serial Number: "##
+> 记得还有一个更简短的命令，等想起来了  再补充

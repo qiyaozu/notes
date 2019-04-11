@@ -121,3 +121,7 @@ vim /etc/hosts
 ### node安装的时候，**强烈**建议大家不要用编译安装，太慢了,请使用nvm安装，但是使用nvm安装node之后，每次启动都要nvm use，解决方法:
 
   nvm alias default stable   
+
+### 查看端口被占用情况
+- lsof -i:端口号
+- netstat -tunlp|grep 端口号
