@@ -13,5 +13,4 @@ title: mac使用mysql
 ```code
 mysql -u root -p
 ```
-
 接下来会输入密码： 123456

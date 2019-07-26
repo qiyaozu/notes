@@ -297,8 +297,12 @@ module.exports = {
 
 ## [Vue CLI 3] 配置 webpack-bundle-analyzer 插件
 
+<<<<<<< HEAD
 > 在vue.config.js里面添加
 
+=======
+1. 在vue.config.js里面添加
+>>>>>>> 603dd87d554166584c781088820992004b9c4ad1
 ```js
 config
   .plugin('webpack-bundle-analyzer')

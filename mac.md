@@ -120,6 +120,11 @@ export PATH
   open -a finder /usr/local/etc/nginx
 ```
 
+### mac terminal打开软件 或者用finder打开指定的目录
+
+  open -a Safari touch.html
+  open -a finder /usr/local/etc/nginx
+
 ### 使用ngrok将本地端口映射到外网给别人看
 
 1. [下载软件](https://ngrok.com/download)
