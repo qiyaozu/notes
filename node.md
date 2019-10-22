@@ -60,3 +60,9 @@ function unescapeHTML(a){
 ```
 
 3):JSON.parse
+
+### 数据库存储emoji表情的问题：
+```code
+<!-- utf8mb4 可以存储四个字节的数据 -->
+ALTER TABLE {表名} CHANGE {表字段名} {表字段名} VARCHAR(200) CHARACTER SET utf8mb4;
+```

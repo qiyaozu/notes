@@ -128,3 +128,38 @@ vim /etc/hosts
 
 ### 删除目录下所有.xml后缀名的文件
 - find . -name '*.xml' -delete
+
+### ubuntu安装mysql，参考链接：
+https://blog.csdn.net/qq_38737992/article/details/81090373
+登录的时候： mysql -u root -p密码
+
+### Ubuntu安装redis：sudo apt-get install redis-server
+
+### kali安装nodejs
+```code
+wget -qO- https://deb.nodesource.com/setup_12.x | sudo -E bash -
+apt-get update
+apt-get install nodejs
+apt-get install npm
+```
+
+
+### Unbutu卡在“waiting for headers”
+```code
+
+rm -rf /var/lib/apt/lists/*
+rm -rf /var/lib/apt/lists/partial/*
+```
+
+### linux下npm安装的全局命令无法执行
+https://blog.csdn.net/qq_33788609/article/details/90691574
+1. 对当前用户有效
+```code
+vi ~/.bashrc
+export PATH=$PATH:/usr/local/node/bin
+```
+2. 所有账户均有效
+```code
+sudo vi /etc/profile
+export PATH=$PATH:/usr/local/node/bin
+```

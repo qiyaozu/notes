@@ -39,3 +39,7 @@ PM2是node进程管理工具，可以利用它来简化很多node应用管理的
 2. 第一步执行完成之后，会让你执行一段命令  直接复制到命令行，回车执行
 3. pm2 save （把需要自动启动的服务先执行起来）
 
+### pm2执行npm命令：
+```code
+ pm2 start npm --name socket -- run start --watch
+```
