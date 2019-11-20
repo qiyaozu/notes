@@ -131,6 +131,19 @@ vim /etc/hosts
 
 ### ubuntu安装mysql，参考链接：
 https://blog.csdn.net/qq_38737992/article/details/81090373
+
+```code
+sudo apt-get update
+sudo apt-get install mysql-server
+
+<!-- 初始化配置 -->
+sudo mysql_secure_installation
+
+<!-- 检查mysql的运行状态 -->
+systemctl status mysql.service
+
+
+```
 登录的时候： mysql -u root -p密码
 
 ### Ubuntu安装redis：sudo apt-get install redis-server
@@ -162,4 +175,36 @@ export PATH=$PATH:/usr/local/node/bin
 ```code
 sudo vi /etc/profile
 export PATH=$PATH:/usr/local/node/bin
+```
+
+### The following packages have unmet dependencies
+https://blog.csdn.net/qiqzhang/article/details/87862556
+
+
+https://github-production-release-asset-2e65be.s3.amazonaws.com/48378947/80a21000-fdc5-11e9-9f07-6de93f1b7ddd?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20191104%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20191104T155456Z&X-Amz-Expires=300&X-Amz-Signature=698116f5582a724906985da257e7990461f776ec5617e4c9a5601d6f22834b9d&X-Amz-SignedHeaders=host&actor_id=23499946&response-content-disposition=attachment%3B%20filename%3Dfrp_0.29.1_linux_arm.tar.gz&response-content-type=application%2Foctet-stream
+
+
+### ubuntu安装Golang
+```code
+<!-- 卸载旧版 -->
+sudo apt-get remove golang-go
+sudo apt-get remove --auto-remove golang-go
+
+<!-- 安装 -->
+wget https://studygolang.com/dl/golang/go1.12.5.linux-amd64.tar.gz
+tar -zxvf go1.12.5.linux-amd64.tar.gz
+sudo mv go /usr/local/
+
+<!-- 配置 -->
+vim ~/.bashrc
+
+export GOROOT=/usr/local/go              # 安装目录。
+export GOPATH=$HOME/go     # 工作环境
+export GOBIN=$GOPATH/bin           # 可执行文件存放
+export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH       # 添加PATH路径
+
+source ~/.bashrc
+
+<!-- 测试是否安装成功 -->
+go version
 ```
