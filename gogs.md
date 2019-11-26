@@ -10,3 +10,5 @@ title: ubuntu Gogs安装
 
 ## 具体参靠：
 https://gogs.io/docs/installation/install_from_source.html
+
+## gogs可以设置钉钉webhook，比较实用，具体操作是进去到仓库里面，生成钉钉的webhook，在钉钉软件里面再去设置
