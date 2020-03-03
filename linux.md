@@ -128,6 +128,7 @@ vim /etc/hosts
 
 ### 删除目录下所有.xml后缀名的文件
 - find . -name '*.xml' -delete
+- find . -name "*.xml" -exec rm -rf {} \;
 
 ### ubuntu安装mysql，参考链接：
 https://blog.csdn.net/qq_38737992/article/details/81090373
@@ -192,7 +193,7 @@ sudo apt-get remove --auto-remove golang-go
 
 <!-- 安装 -->
 wget https://studygolang.com/dl/golang/go1.12.5.linux-amd64.tar.gz
-tar -zxvf go1.12.5.linux-amd64.tar.gz
+tar -zxvf go1.12.5.linux-amd64.tar.gz 
 sudo mv go /usr/local/
 
 <!-- 配置 -->
@@ -208,3 +209,4 @@ source ~/.bashrc
 <!-- 测试是否安装成功 -->
 go version
 ```
+

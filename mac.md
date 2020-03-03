@@ -169,7 +169,7 @@ sudo kill -9 PID
 ## mac下谷歌浏览器解决跨域：（前提是要在*Documents*文件夹下面创建*MyChromeDevUserData*空目录，**下面的用户名也记得改一下**）
 
 ```code
-  open -n /Applications/Google\ Chrome.app/ --args --disable-web-security  --user-data-dir=/Users/qiyaozu/Documents/MyChromeDevUserData
+  open -n /Applications/Google\ Chrome.app/ --args --disable-web-security  --user-data-dir=/Users/yaozu/Documents/MyChromeDevUserData
 ```
 
 ## Mac 下基本命令command not found 解决办法
