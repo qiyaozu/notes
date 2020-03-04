@@ -12,4 +12,5 @@ title: 图片生成icon
 
 * 生成之后，在第二个页面点击downLoad便可
 
-## [https://icomoon.io/app/#/select](https://icomoon.io/app/#/select) 将svg生成图标字体
+## 参考[这个](https://icomoon.io/app/#/select)网站， 将svg生成图标字体
+

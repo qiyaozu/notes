@@ -210,3 +210,9 @@ source ~/.bashrc
 go version
 ```
 
+### apt-get update时卡在 waiting for headers
+```
+rm -rf /var/lib/apt/lists/* 
+rm -rf /var/lib/apt/lists/partial/* 
+
+```

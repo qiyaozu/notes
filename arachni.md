@@ -3,7 +3,7 @@ title: arachni对网站进行安全检查
 ---
 
 ### 第一步：安装
-可以从[官网](https://www.arachni-scanner.com/)去下载（下载很慢），我放了一份在百度云，使用[BND2](https://github.com/b3log/baidu-netdisk-downloaderx?utm_source=hacpai.com)去下载
+可以从[官网](https://www.arachni-scanner.com/)去下载（下载很慢），我放了一份在百度云
 网盘地址：链接: https://pan.baidu.com/s/1dioWcTHx5qR6ffMwS8l-zA 提取码: aqfm
 
 下载完成后，解压并进入到bin目录，命令行执行：./arachni_web

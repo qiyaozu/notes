@@ -2,7 +2,7 @@
 title: appium 搭建时候用到的资料
 ---
 
-appium的作用：表面上是测试ios和安卓应用，实际上可以做各种有趣的事情~
+appium的作用：表面上是测试ios和安卓应用，实际上可以做各种有趣的事情，比如：薅羊毛~
 
 ### 查看本机可用的虚拟设备(ios)
     xcrun simctl list devices
